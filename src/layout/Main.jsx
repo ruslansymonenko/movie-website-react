@@ -7,12 +7,11 @@ class Main extends React.Component {
   }
 
   componentDidMount () {
-    fetch('http://www.omdbapi.com/?apikey=c959a010&s=matrix')
-      .then(response => response.json)
-      .then(data => console.log(data.Search))
+    fetch('http://www.omdbapi.com/?apikey=c959a010&s=matrix', {method: 'GET'})
+      .then(response => response.json())
+      .then(data => this.setState({movies: data.Search}))
   }
 
-  //this.setState({movies: data.Search})
   render() {
     const {movies} = this.state
 

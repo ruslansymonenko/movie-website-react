@@ -71,3 +71,17 @@ code {
   min-height: calc(100vh - 70px - 64px);
   padding: 20px 0px;
 }
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.movie-card {
+  transition: 0.3s;
+}
+
+.movie-card:hover {
+  transform: scale(1.02);
+}
