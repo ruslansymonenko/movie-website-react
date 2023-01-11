@@ -85,3 +85,9 @@ code {
 .movie-card:hover {
   transform: scale(1.02);
 }
+
+.search-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
