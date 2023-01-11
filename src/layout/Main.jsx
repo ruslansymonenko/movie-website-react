@@ -1,6 +1,7 @@
 import React from "react";
 import {Movies} from '../components/Movies.jsx';
 import {Preloader} from '../components/Preloader.jsx';
+import { Search } from '../components/Search.jsx';
 
 class Main extends React.Component {
   state = {
@@ -13,10 +14,14 @@ class Main extends React.Component {
       .then(data => this.setState({movies: data.Search}))
   }
 
+  
+
+
   render() {
     const {movies} = this.state
 
     return <main className="container content">
+              <Search/>
               {
                 movies.length ? (
                   <Movies movies={this.state.movies}/>
